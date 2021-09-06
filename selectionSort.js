@@ -13,10 +13,8 @@ const selectionSort = (unsortedArr) => {
         minIndexValue = index2;
       }
     }
-    [unsortedArr[index], unsortedArr[minIndexValue]] = [
-      unsortedArr[minIndexValue],
-      unsortedArr[index],
-    ];
+    
+    [unsortedArr[index], unsortedArr[minIndexValue]] = [unsortedArr[minIndexValue],unsortedArr[index]];
   }
   return unsortedArr;
 };

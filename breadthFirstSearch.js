@@ -9,7 +9,8 @@
 function breadthFirstSearch(graph, rootNode) {
   let queue = [], visited = [];
   queue[0] = rootNode;
-
+  visited[0] = rootNode;
+  
   while (queue.length) {
     let visitedNode = queue.shift();
 
@@ -22,6 +23,7 @@ function breadthFirstSearch(graph, rootNode) {
       }
     });
   }
+  console.log(visited);
 }
 
 const graph = { 0: [1, 2], 1: [2], 2: [3], 3: [1, 2] };
