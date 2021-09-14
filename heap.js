@@ -9,6 +9,7 @@
 
 class Heap
 {
+    // O(n)
     maxHeap(arr)
     {
         for(let index = parseInt((arr.length / 2) -1) ; index > -1; index--)
@@ -16,6 +17,7 @@ class Heap
             this.heapify(arr , arr.length , index);
         }
     }
+    // O(Logn)
     heapify(arr , size , index) // we have to start from index size/2 -1 which is the node that has a leaf nodes
     {
         let largestIndex = index;
@@ -68,6 +70,19 @@ class Heap
                 
                 this.maxHeap(arr); 
             }
+        }
+    }
+
+    /**
+     * 
+     * O ( n Log n) 
+     */
+    sort(arr)
+    {
+        for(let index = arr.length - 1; index > 0; index--)
+        {
+            [arr[index] , arr[0]] = [arr[0] , arr[index]]
+            heapify(arr , index , 0);
         }
     }
 }

@@ -14,7 +14,7 @@ class HashTable
             hashed += key.charCodeAt(i);
         }
 
-        return hashed & this.table.length;
+        return hashed % this.table.length;
     }
 
     set(key , value)
