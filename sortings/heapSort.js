@@ -1,4 +1,8 @@
-
+/**
+ *  Best Case : O(nlog n)
+    Average Case : O(n log n)
+    Worst Case : O(n Log n)
+ */
 
 function Heapsort(arr)
 {
