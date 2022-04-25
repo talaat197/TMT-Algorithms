@@ -131,13 +131,13 @@ class BinaryTree
         }
     }
 
-    postorder(node)
+    postorder(node) // left. right. root
     {
         if(node !== null)
         {
-            this.inorder(node.left)
-            this.inorder(node.right)
-            console.log(node.data)
+            this.inorder(node.left) // left
+            this.inorder(node.right) // right
+            console.log(node.data) // root
         }
     }
 
