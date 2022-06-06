@@ -62,6 +62,16 @@ class Graph{
             })
         }
     }
+
+    dfsRecursion(root, visited = new Set())
+    {
+        if(visited.has(root)) return
+        console.log({dfs: root})
+        visited.add(root)
+        this.adjList.get(root).forEach((node) => {
+            this.dfsRecursion(node, visited)
+        })
+    }
 }
 
 var graph = new Graph();
@@ -85,5 +95,8 @@ graph.addEdge(2 , 6);
 // graph.printGraph();
 
 graph.bfs(1);
+graph.dfsRecursion(1);
+graph.depthFirstSearch(1);
+
 
 
