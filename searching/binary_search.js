@@ -33,18 +33,18 @@ function recursionBinarySearch(arr, searchValue, lowIndex, highIndex) {
   mid = parseInt((lowIndex + highIndex) / 2);
 
   if (arr[mid] === searchValue) return mid;
-  
+
   if (searchValue > arr[mid]) {
     lowIndex = mid + 1;
     return binarySearch(arr, searchValue, lowIndex, highIndex);
   }
-    if (searchValue < arr[mid]) {
+  if (searchValue < arr[mid]) {
     highIndex = mid - 1;
     return binarySearch(arr, searchValue, lowIndex, highIndex);
   }
 }
 
-let testArray = [1, 2, 3, 4, 5, 6, 7,2];
+let testArray = [1, 2, 3, 4, 5, 6, 7, 2];
 
 console.log(binarySearch(testArray, 2));
 
